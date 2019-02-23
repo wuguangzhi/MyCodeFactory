@@ -6,22 +6,22 @@ import cn.org.rapid_framework.generator.GeneratorFacade;
 public class CodeGenerator {
 
 	public static void main(String[] args) throws Exception {
-        //Ä£°åÂ·¾¶
-		String templatePath = "D:/workspace/MyCodeFactory/src/main/resources/template";
+		//æ¨¡æ¿è·¯å¾„
+		String templatePath = "D:\\git_workspace\\learn\\MyCodeFactory\\src\\main\\resources\\template";
 		
 		GeneratorFacade g = new GeneratorFacade();
 		g.getGenerator().addTemplateRootDir(templatePath);
-		
-		// É¾³ıÉú³ÉÆ÷µÄÊä³öÄ¿Â¼//
-		// g.deleteOutRootDir();
-		
-		// Í¨¹ıÊı¾İ¿â±íÉú³ÉÎÄ¼ş
-		g.generateByTable("task_log");
 
-		// ×Ô¶¯ËÑË÷Êı¾İ¿âÖĞµÄËùÓĞ±í²¢Éú³ÉÎÄ¼ş,templateÎªÄ£°åµÄ¸ùÄ¿Â¼
+		// åˆ é™¤ç”Ÿæˆå™¨çš„è¾“å‡ºç›®å½•//
+		// g.deleteOutRootDir();
+
+		// é€šè¿‡æ•°æ®åº“è¡¨ç”Ÿæˆæ–‡ä»¶
+		g.generateByTable("pg_cron_message");
+
+		// è‡ªåŠ¨æœç´¢æ•°æ®åº“ä¸­çš„æ‰€æœ‰è¡¨å¹¶ç”Ÿæˆæ–‡ä»¶,templateä¸ºæ¨¡æ¿çš„æ ¹ç›®å½•
 		// g.generateByAllTable();
-		
-		// °´tableÃû×ÖÉ¾³ıÎÄ¼ş
+
+		// æŒ‰tableåå­—åˆ é™¤æ–‡ä»¶
 		// g.deleteByTable("table_name", "template");
 	}
 
